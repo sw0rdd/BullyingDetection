@@ -7,6 +7,11 @@ from sklearn.model_selection import GridSearchCV, StratifiedKFold, train_test_sp
 from imblearn.pipeline import Pipeline as ImbPipeline
 from imblearn.over_sampling import SMOTE
 
+"""
+This script is used to find the best hyperparameters for a Multinomial Naive Bayes model using grid search with 5-fold cross-validation.
+The best model is then evaluated using the F3-score metric.
+"""
+
 # Load data
 # data = pd.read_csv('./data/new_preprocessed_friends_data.csv')
 

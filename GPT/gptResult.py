@@ -1,7 +1,9 @@
 import pandas as pd
 from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score, fbeta_score, precision_recall_fscore_support
 
-print()
+"""
+This code snippet is used to evaluate the performance of the GPT-4o model on a classification task.
+"""
 
 actual_data = pd.read_csv('./GPT_Data/Friends_not_sens_filtered.csv')
 

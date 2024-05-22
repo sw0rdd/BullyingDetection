@@ -2,8 +2,13 @@ import stanza
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.model_selection import train_test_split
-from datetime import datetime
-import time
+from datetime import datetimew
+
+"""
+This script include the preprocessing of the data using the stanza library.
+It performs tokenization, lemmatization and stop words removal
+The preprocessed data is then saved to a new CSV file.
+"""
 
 
 ############# setup and data loading ################

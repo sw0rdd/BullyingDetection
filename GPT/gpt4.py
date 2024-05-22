@@ -2,9 +2,13 @@ from openai import OpenAI
 import pandas as pd
 from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score, fbeta_score
 
+"""
+This script uses the OpenAI API to classify text data using the GPT-4o model.
+"""
+
 
 # Initialize the OpenAI client with API key
-client = OpenAI(api_key='sk-proj-eRVjrRh9M6LE3mXWy0zwT3BlbkFJlAx7myRvxSrkYJeSfhAr')
+client = OpenAI(api_key='####')
 
 # Load the data
 data = pd.read_csv('./GPT_Data/Friends_not_sens_filtered.csv')
@@ -58,8 +62,8 @@ def classify_text(prompt, text):
         total_cost += cost
         
         # Print cost for this prompt
-        # print(f"Prompt Tokens: {prompt_tokens}, Completion Tokens: {completion_tokens}, Total Tokens: {total_tokens}")
-        # print(f"Cost for this prompt: ${cost:.5f}")
+        print(f"Prompt Tokens: {prompt_tokens}, Completion Tokens: {completion_tokens}, Total Tokens: {total_tokens}")
+        print(f"Cost for this prompt: ${cost:.5f}")
         
         return int(float(label))
     
@@ -84,10 +88,7 @@ rädd eller hotad. Innehåll som bara är stötande eller upprörande innebär i
 automatiskt att texten ska märkas som '1.0'."""
 
 
-print("Jag är rädd " , classify_text(prompt, "jag är rädd"))
-print("Jag är rädd från råttor ", classify_text(prompt, "jag är rädd från råttor"))
-
-# data['predicted_label'] = data['text'].apply(lambda x: classify_text(prompt, x))
+data['predicted_label'] = data['text'].apply(lambda x: classify_text(prompt, x))
 
 # Print total tokens used and total cost
 print(f"Total Input Tokens: {total_input_tokens}")
@@ -95,9 +96,8 @@ print(f"Total Output Tokens: {total_output_tokens}")
 print(f"Total Cost: ${total_cost:.5f}")
 
 
-
 # Save the results to a new CSV file
-# data.to_csv('./GPT_Data/GPT4o_predictions_price.csv', index=False)
+data.to_csv('./GPT_Data/GPT4o_predictions_price.csv', index=False)
 
 
 

@@ -7,6 +7,11 @@ from sklearn.pipeline import Pipeline
 from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline as ImbPipeline
 
+"""
+This script is used to find the best hyperparameters for a Support Vector Machine model using grid search with 5-fold cross-validation.
+The best model is then evaluated using the F3-score metric.
+"""
+
 # Load data
 # data = pd.read_csv('./data/new_preprocessed_friends_data.csv')
 data = pd.read_csv('./data/preprocessed_dataset.csv')
