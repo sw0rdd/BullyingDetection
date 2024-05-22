@@ -8,7 +8,7 @@ This script uses the OpenAI API to classify text data using the GPT-4o model.
 
 
 # Initialize the OpenAI client with API key
-client = OpenAI(api_key='sk-proj-eRVjrRh9M6LE3mXWy0zwT3BlbkFJlAx7myRvxSrkYJeSfhAr')
+client = OpenAI(api_key='####')
 
 # Load the data
 data = pd.read_csv('./GPT_Data/Friends_not_sens_filtered.csv')
