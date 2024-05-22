@@ -5,6 +5,12 @@ from sklearn.model_selection import train_test_split
 from datetime import datetime
 import re
 
+"""
+This script include the preprocessing of the data using the stanza library.
+It performs tokenization and lemmatization, stop words are not removed.
+The preprocessed data is then saved to a new CSV file.
+"""
+
 ############# setup and data loading ################
 
 # Ensure the Swedish model is downloaded

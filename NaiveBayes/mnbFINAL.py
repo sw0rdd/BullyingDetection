@@ -9,6 +9,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+"""
+This script is used to find the best threshold for a Multinomial Naive Bayes model using 5-fold cross-validation.
+The best threshold is then evaluated using the F3-score metric.
+"""
+
 # Load data with stop words
 # data = pd.read_csv('./data/new_preprocessed_friends_data.csv')
 

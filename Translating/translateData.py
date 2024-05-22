@@ -2,6 +2,13 @@ import pandas as pd
 from transformers import MarianMTModel, MarianTokenizer
 import torch
 
+
+"""
+This script is used to translate text data from English to Swedish using the MarianMT model.
+The translated data is then saved to a new CSV file.
+"""
+
+
 # Function to translate text using the MarianMT model
 def translate_texts(texts, model_name="Helsinki-NLP/opus-mt-en-sv"):
     tokenizer = MarianTokenizer.from_pretrained(model_name)
